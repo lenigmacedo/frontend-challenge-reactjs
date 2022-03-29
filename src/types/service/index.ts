@@ -1,13 +1,13 @@
 import { IFilms, IPlanets } from '../api';
 
 export interface IResponse {
-  count: number;
+  count?: number;
   next?: string;
   previous?: string;
 }
 
 export interface IResponsePlanets extends IResponse {
-  results: IPlanets[];
+  results: IPlanets[] | IResponsePlanets[];
 }
 
 export interface IResponseFilms extends IResponse {

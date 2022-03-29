@@ -1,5 +1,5 @@
 import { IPlanets } from '../api';
 
-export interface ICardProps {
+export interface ICardPlanets {
   planet: IPlanets;
 }

@@ -13,6 +13,10 @@ export const InputWrapper = styled.div`
   align-items: center;
   margin-bottom: 2rem;
 
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+
   input {
     width: 100%;
     background: transparent;
