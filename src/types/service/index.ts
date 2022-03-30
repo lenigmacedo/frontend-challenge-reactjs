@@ -1,4 +1,11 @@
-import { IFilms, IPlanets } from '../api';
+import {
+  IFilms,
+  IPeople,
+  IPlanets,
+  ISpecies,
+  IStarships,
+  IVehicles,
+} from '../api';
 
 export interface IResponse {
   count?: number;
@@ -11,5 +18,21 @@ export interface IResponsePlanets extends IResponse {
 }
 
 export interface IResponseFilms extends IResponse {
-  results: IFilms[];
+  results: IFilms[] | IResponseFilms[];
+}
+
+export interface IResponsePeople extends IResponse {
+  results: IPeople[] | IResponseFilms[];
+}
+
+export interface IResponseVehicles extends IResponse {
+  results: IVehicles[] | IResponseFilms[];
+}
+
+export interface IResponseSpecies extends IResponse {
+  results: ISpecies[] | IResponseFilms[];
+}
+
+export interface IResponseStartships extends IResponse {
+  results: IStarships[] | IResponseFilms[];
 }

@@ -14,8 +14,26 @@ export const CardWrapper = styled.div`
   max-width: 100%;
   justify-content: space-between;
 
+  @media screen and (max-width: 768px) {
+    flex: auto;
+  }
+
   p {
     margin-bottom: 8px;
+
+    span > button {
+      font-size: 12px;
+      border-radius: 6px;
+      background: transparent;
+      border: 1px solid ${Colors.black};
+      margin: 0 5px 5px 5px;
+      padding: 3px 2px;
+      color: ${Colors.black};
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
 
     @media screen and (max-width: 768px) {
       white-space: break-spaces;

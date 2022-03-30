@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Colors } from '../../utils/colors';
 
 export const ContainerWrapper = styled.div`
   display: flex;
@@ -19,4 +20,33 @@ export const ContainerWrapper = styled.div`
     left: 0;
     z-index: -1;
   }
+`;
+
+export const WrapperPages = styled.div`
+  width: 50%;
+  margin-bottom: 10px;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+
+  p:hover {
+    cursor: pointer;
+  }
+`;
+
+export const Sound = styled.div`
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background-color: ${Colors.white};
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 8px;
+  cursor: pointer;
 `;

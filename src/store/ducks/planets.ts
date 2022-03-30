@@ -12,7 +12,6 @@ const planets = createSlice({
       return {
         ...state,
         results: action.payload.results,
-        next: action.payload.next,
       };
     },
   },

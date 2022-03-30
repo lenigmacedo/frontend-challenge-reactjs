@@ -1,7 +1,14 @@
 import { Action, ThunkAction } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { store } from '../../store';
-import { IFilms, IPlanets } from '../api';
+import {
+  IFilms,
+  IPeople,
+  IPlanets,
+  ISpecies,
+  IStarships,
+  IVehicles,
+} from '../api';
 
 export interface IReduxState {
   films: {
@@ -9,6 +16,21 @@ export interface IReduxState {
   };
   planets: {
     results: IPlanets[];
+  };
+  people: {
+    results: IPeople[];
+  };
+  species: {
+    results: ISpecies[];
+  };
+  starships: {
+    results: IStarships[];
+  };
+  vehicles: {
+    results: IVehicles[];
+  };
+  config: {
+    sound: boolean;
   };
 }
 

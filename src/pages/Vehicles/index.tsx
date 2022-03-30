@@ -3,22 +3,21 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { Container } from '../../components/Container';
 import { GridView } from '../../components/GridView';
-import { handleFilms } from '../../store/actions/films';
-import { IFilms, IPlanets } from '../../types/api';
+import { handleVehicles } from '../../store/actions/vehicles';
+import { IVehicles } from '../../types/api';
 import { IReduxState } from '../../types/store';
 import { getId, getPageNumber } from '../../utils/functions';
-import { CardFilm } from './commom';
-// import { CardPlanets } from './commom/Card';
+import { CardVehicles } from './commom';
 
-export const FilmsPage: React.FC = () => {
+export const VehiclesPage: React.FC = () => {
   const [nextPage, setNextPage] = useState<number>();
   const [previousPage, setPreviousPage] = useState<number>();
   const [search, setSearch] = useState<string>();
   const dispatch = useDispatch();
   const location = useLocation();
-  const films = useSelector((state: IReduxState) => state.films.results);
+  const vehicles = useSelector((state: IReduxState) => state.vehicles.results);
 
-  const getFilms = async (
+  const getVehicles = async (
     isPrevious?: boolean,
     canGoNext?: boolean,
     id?: string | null
@@ -29,7 +28,8 @@ export const FilmsPage: React.FC = () => {
       page = 1;
     }
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const { payload }: any = await dispatch(handleFilms(page, search, id));
+    const { payload }: any = await dispatch(handleVehicles(page, search, id));
+
     const newPage = getPageNumber(payload.next);
     const priorPage = getPageNumber(payload.previous);
     setNextPage(newPage);
@@ -37,29 +37,29 @@ export const FilmsPage: React.FC = () => {
   };
 
   useEffect(() => {
-    getFilms(false, false, getId(location.search));
+    getVehicles(false, false, getId(location.search));
   }, []);
 
   return (
     <Container
       onPreviousPage={() => {
-        getFilms(true, true);
+        getVehicles(true, true);
       }}
-      onNextPage={() => getFilms(false, true)}
+      onNextPage={() => getVehicles(false, true)}
       previousPage={previousPage}
       nextPage={nextPage}
       onInputBlur={() => {
         if (!search) {
-          getFilms(false, false);
+          getVehicles(false, false);
           return;
         }
-        getFilms();
+        getVehicles();
       }}
       onInputChange={(event) => setSearch(event.target.value)}
     >
       <GridView>
-        {films.map((film: IFilms) => {
-          return <CardFilm film={film} />;
+        {vehicles.map((vehicle: IVehicles) => {
+          return <CardVehicles vehicle={vehicle} />;
         })}
       </GridView>
     </Container>

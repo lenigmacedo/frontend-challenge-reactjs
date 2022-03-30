@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Card } from '../../../components/Card';
-import { ICardPlanets } from '../../../types/card/CardPlanet';
+import { ICardPlanets } from '../../../types/card';
+import { getIdFromUrl } from '../../../utils/functions';
 
 export const CardPlanets: React.FC<ICardPlanets> = ({ planet }) => {
   const navigate = useNavigate();
-  const location = useLocation();
 
   return (
     <Card>
@@ -22,13 +22,16 @@ export const CardPlanets: React.FC<ICardPlanets> = ({ planet }) => {
         <div>
           <p>Residentes:</p>
           <span>
-            {planet.residents.map((resident, index) => {
+            {planet.residents.map((resident) => {
               return (
                 <button
                   type="button"
-                  onClick={() => navigate(`${location.pathname}/`)}
+                  onClick={() => {
+                    const id = getIdFromUrl(resident);
+                    navigate(`/people?id=${id}`);
+                  }}
                 >
-                  Residente {index + 1}
+                  Residente {getIdFromUrl(resident)}
                 </button>
               );
             })}
@@ -40,10 +43,16 @@ export const CardPlanets: React.FC<ICardPlanets> = ({ planet }) => {
         <div>
           <p>Filmes:</p>
           <span>
-            {planet.films.map((resident, index) => {
+            {planet.films.map((film) => {
               return (
-                <button type="button" onClick={() => navigate(`/films`)}>
-                  Filme {index + 1}
+                <button
+                  type="button"
+                  onClick={() => {
+                    const id = getIdFromUrl(film);
+                    navigate(`/films?id=${id}`);
+                  }}
+                >
+                  Filme {getIdFromUrl(film)}
                 </button>
               );
             })}
