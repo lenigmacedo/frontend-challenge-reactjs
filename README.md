@@ -33,7 +33,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Homepage][homepage]](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app)
+[![Homepage][homepage]](https://frontend-challenge-reactjs.vercel.app)
 
 Um projeto com o fim de testar habilidades no React utilizando a [SWAPI](https://swapi.dev) para visualização de dados.
 
@@ -107,25 +107,25 @@ Veja a seção sobre [deployment](https://facebook.github.io/create-react-app/do
 <br />
 
 ### Páginas
-Você pode pesquisar por [Planetas](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/), [Filmes](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/films), [Pessoas](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people), [Veículos](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/vehicles), [Espécies](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/species) e [Espaçonaves](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/starships)
+Você pode pesquisar por [Planetas](https://frontend-challenge-reactjs.vercel.app/), [Filmes](https://frontend-challenge-reactjs.vercel.app/films), [Pessoas](https://frontend-challenge-reactjs.vercel.app/people), [Veículos](https://frontend-challenge-reactjs.vercel.app/vehicles), [Espécies](https://frontend-challenge-reactjs.vercel.app/species) e [Espaçonaves](https://frontend-challenge-reactjs.vercel.app/starships)
 
 Além de ser possível pesquisar por parâmetro através da url
 
 ### _Exemplo_
 
-Pesquisando na página de [Pessoas]() onde o ID seja igual a [1](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people?id=1)
+Pesquisando na página de [Pessoas](https://frontend-challenge-reactjs.vercel.app/people) onde o ID seja igual a [1](https://frontend-challenge-reactjs.vercel.app/people?id=1)
 
-[![Exemplo de pesquisa][example-search]](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people?id=1)
+[![Exemplo de pesquisa][example-search]](https://frontend-challenge-reactjs.vercel.app/people?id=1)
 
 <br />
 
 
 ### Adicionar Pessoas
-Na página de [Pessoas](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people) é possível fazer a adição de um personagem
+Na página de [Pessoas](https://frontend-challenge-reactjs.vercel.app/people) é possível fazer a adição de um personagem
 
 ### _Exemplo_
 Adicionando um novo personagem
-[![Exemplo de adição][example-add]](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people)
+[![Exemplo de adição][example-add]](https://frontend-challenge-reactjs.vercel.app/people)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
