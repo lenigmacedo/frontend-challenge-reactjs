@@ -4,11 +4,10 @@ import { useLocation } from 'react-router-dom';
 import { Container } from '../../components/Container';
 import { GridView } from '../../components/GridView';
 import { handleFilms } from '../../store/actions/films';
-import { IFilms, IPlanets } from '../../types/api';
+import { IFilms } from '../../types/api';
 import { IReduxState } from '../../types/store';
 import { getId, getPageNumber } from '../../utils/functions';
 import { CardFilm } from './commom';
-// import { CardPlanets } from './commom/Card';
 
 export const FilmsPage: React.FC = () => {
   const [nextPage, setNextPage] = useState<number>();

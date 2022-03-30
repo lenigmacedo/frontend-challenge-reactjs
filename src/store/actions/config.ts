@@ -1,6 +1,6 @@
 import { Howl, Howler } from 'howler';
 import { AppDispatch } from '../../types/store';
-import { setSound } from '../ducks/config';
+import { setSound, setLoading } from '../ducks/config';
 import audio from '../../assets/sounds/audio.mp3';
 
 export const handleSound = (sound: boolean) => (dispatch: AppDispatch) => {
@@ -20,7 +20,10 @@ export const handleSound = (sound: boolean) => (dispatch: AppDispatch) => {
 
     return dispatch(setSound(sound));
   } catch (err) {
-    console.error('erro', err);
     return err;
   }
+};
+
+export const toggleLoading = (loading: boolean) => (dispatch: AppDispatch) => {
+  return dispatch(setLoading(loading));
 };

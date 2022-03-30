@@ -31,6 +31,7 @@ export interface IReduxState {
   };
   config: {
     sound: boolean;
+    loading: boolean;
   };
 }
 

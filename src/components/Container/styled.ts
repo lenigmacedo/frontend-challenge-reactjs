@@ -49,4 +49,10 @@ export const Sound = styled.div`
   display: flex;
   padding: 8px;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+
+  @media screen and (max-width: 768px) {
+    border: 2px solid ${Colors.primary};
+  }
 `;

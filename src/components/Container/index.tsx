@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ContainerWrapper, Sound, WrapperPages } from './styled';
 import backgroundVideo from '../../assets/videos/background.mp4';
@@ -9,6 +9,7 @@ import { IReduxState } from '../../types/store';
 import sound from '../../assets/img/sound.png';
 import noSound from '../../assets/img/no-sound.png';
 import { handleSound } from '../../store/actions/config';
+import { Loading } from '../Loading';
 
 export const Container: React.FC<IContainerProps> = ({
   children,
@@ -20,6 +21,8 @@ export const Container: React.FC<IContainerProps> = ({
   onPreviousPage,
 }) => {
   const config = useSelector((state: IReduxState) => state.config);
+  const loading = useSelector((state: IReduxState) => state.config.loading);
+
   const dispatch = useDispatch();
 
   return (
@@ -47,7 +50,7 @@ export const Container: React.FC<IContainerProps> = ({
         {nextPage && <p onClick={() => onNextPage()}>Próxima página {'>'}</p>}
       </WrapperPages>
 
-      {children}
+      {loading ? <Loading /> : children}
     </ContainerWrapper>
   );
 };

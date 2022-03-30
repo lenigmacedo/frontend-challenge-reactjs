@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card } from '../../../components/Card';
-import { IFilms } from '../../../types/api';
 import { ICardFilms } from '../../../types/card/index';
 import { getIdFromUrl } from '../../../utils/functions';
 import { CardWrapper } from './styled';

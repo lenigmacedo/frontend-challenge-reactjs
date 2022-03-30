@@ -8,6 +8,7 @@ import { IPeople } from '../../types/api';
 import { IReduxState } from '../../types/store';
 import { getId, getPageNumber } from '../../utils/functions';
 import { CardPeople } from './commom';
+import { NewPeople } from './styled';
 
 export const PeoplePage: React.FC = () => {
   const [nextPage, setNextPage] = useState<number>();
@@ -57,6 +58,10 @@ export const PeoplePage: React.FC = () => {
       }}
       onInputChange={(event) => setSearch(event.target.value)}
     >
+      <NewPeople>
+        <p>+</p>
+      </NewPeople>
+
       <GridView>
         {people.map((peopleObj: IPeople) => {
           return <CardPeople people={peopleObj} />;
