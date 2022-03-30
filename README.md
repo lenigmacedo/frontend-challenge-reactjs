@@ -1,44 +1,148 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+<div id="top"></div>
+<br />
+<div align="center">
+<h3 align="center">Ideal CTVM - SWAPI</h3>
+</div>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of content</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About Project</a>
+      <ul>
+        <li><a href="#built-with">Built with</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#available-scripts">Available Scripts</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![Homepage][homepage]](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app)
 
-### `npm run build`
+Um projeto com o fim de testar habilidades no React utilizando a [SWAPI](https://swapi.dev) para visualização de dados.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Built With
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* [React.js](https://reactjs.org/)
+* [Redux Toolkit](https://redux-toolkit.js.org)
+* [Redux](https://redux.js.org)
+* [Styled Components](https://styled-components.com)
+* [Axios](https://axios-http.com/ptbr/)
+* [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+<!-- GETTING STARTED -->
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Esse é um exemplo de como você pode rodar o projeto localmente.<br>
+Siga os passos abaixos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Available Scripts
+No diretório do projeto, você pode rodar:
+
+### `yarn start` or `npm start`
+
+Inicia o projeto em modo de desenvolvimento.<br />
+Abra [http://localhost:3000](http://localhost:3000) para o ver em seu navegador.
+
+A página irá recarregar se você fizer mudanças.<br />
+Você também poderá ver qualquer erro no console.
+
+### `yarn build` or `npm run build`
+
+Builda o projeto para produção na pasta `build`. <br />
+Esta é a maneira correta de gerar o bundle do React em modo de produção e otimizar o projeto para melhor performance
+
+O build é minificado e o nome dos arquivos inclui uma hash <br />
+O projeto está pronto para ser publicado!
+
+Veja a seção sobre [deployment](https://facebook.github.io/create-react-app/docs/deployment) para mais informações.
+
+### Installation
+
+1. Clone o repo
+   ```sh
+   git clone https://github.com/lenigmacedo/frontend-challenge-reactjs.git
+   ```
+2. Instale os pacotes NPM
+   ```sh
+   yarn install
+   ```
+   or
+
+   ```sh
+    npm install
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+<br />
+
+### Páginas
+Você pode pesquisar por [Planetas](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/), [Filmes](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/films), [Pessoas](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people), [Veículos](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/vehicles), [Espécies](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/species) e [Espaçonaves](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/starships)
+
+Além de ser possível pesquisar por parâmetro através da url
+
+### _Exemplo_
+
+Pesquisando na página de [Pessoas]() onde o ID seja igual a [1](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people?id=1)
+
+[![Exemplo de pesquisa][example-search]](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people?id=1)
+
+<br />
+
+
+### Adicionar Pessoas
+Na página de [Pessoas](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people) é possível fazer a adição de um personagem
+
+### _Exemplo_
+Adicionando um novo personagem
+[![Exemplo de adição][example-add]](https://frontend-challenge-reactjs-9zp1ltec5-lenigmacedo.vercel.app/people)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- CONTACT -->
+## Contact
+
+Lennyk Macedo - lennykmacedo@gmail.com
+
+Project Link: [https://github.com/lenigmacedo/frontend-challenge-reactjs](https://github.com/lenigmacedo/frontend-challenge-reactjs/tree/master)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[example-search]: search.png
+[homepage]: home.png
+[example-add]: home.png
