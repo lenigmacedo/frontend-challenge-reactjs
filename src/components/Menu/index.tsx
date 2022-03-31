@@ -8,13 +8,7 @@ export const Menu: React.FC = () => {
 
   return (
     <MenuWrapper>
-      <Button
-        onClick={() => {
-          window.location.href = '/';
-        }}
-      >
-        Planets
-      </Button>
+      <Button onClick={() => navigate('/')}>Planets</Button>
       <Button onClick={() => navigate('/films')}>Films</Button>
       <Button onClick={() => navigate('/people')}>People</Button>
       <Button onClick={() => navigate('/vehicles')}>Vehicles</Button>
