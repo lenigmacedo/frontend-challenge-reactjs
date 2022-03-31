@@ -145,4 +145,4 @@ Project Link: [https://github.com/lenigmacedo/frontend-challenge-reactjs](https:
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [example-search]: search.png
 [homepage]: home.png
-[example-add]: home.png
+[example-add]: example-add.png

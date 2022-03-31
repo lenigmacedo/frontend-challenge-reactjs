@@ -14,6 +14,7 @@ export const handlePeople =
       return dispatch(setPeople(response));
     } catch (err) {
       toast.error('Erro ao buscar dados da API');
+      dispatch(toggleLoading(false));
 
       return err;
     }

@@ -14,6 +14,7 @@ export const handleSpecies =
       return dispatch(setSpecies(response));
     } catch (err) {
       toast.error('Erro ao buscar dados da API');
+      dispatch(toggleLoading(false));
 
       return err;
     }

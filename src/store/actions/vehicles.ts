@@ -14,6 +14,7 @@ export const handleVehicles =
       return dispatch(setVehicles(response));
     } catch (err) {
       toast.error('Erro ao buscar dados da API');
+      dispatch(toggleLoading(false));
 
       return err;
     }

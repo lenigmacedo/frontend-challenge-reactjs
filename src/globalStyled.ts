@@ -68,6 +68,28 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #f9c200 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f9c200;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
 `;
 
 export default GlobalStyle;

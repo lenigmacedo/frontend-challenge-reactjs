@@ -14,6 +14,7 @@ export const handlePlanets =
 
       return dispatch(setPlanets(response));
     } catch (err) {
+      dispatch(toggleLoading(false));
       toast.error('Erro ao buscar dados da API');
       return err;
     }

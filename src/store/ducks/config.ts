@@ -14,8 +14,6 @@ const config = createSlice({
       };
     },
     setLoading(state, action: PayloadAction<boolean>) {
-      console.log(action.payload);
-
       return {
         ...state,
         loading: action.payload,

@@ -4,4 +4,7 @@ export const Colors = {
   inputBackground: '#f3f3f3',
   white: '#f1f1f1',
   black: '#000',
+  labelColor: '#939393',
+  borderColor: '#939393',
+  errorColor: '#ff3434',
 };
